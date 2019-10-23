@@ -112,7 +112,7 @@ def save_dm(f_name, f_content):
 
 
 if __name__ == "__main__":
-    # 爬取Mea 只爬取第一页的第一个
+    # 爬取大可爱神乐Mea的b站信息
     get_all_video('349991143', 30, 10)
     for aid in aid_list:
         info_list.clear()
