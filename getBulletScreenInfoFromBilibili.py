@@ -94,11 +94,14 @@ def get_all_bulletscreen(aid):
 
 
 # 保存评论文件为txt
+# content[0]为用户名
+# content【[1]为评论内容
 def save_commit(f_name, f_content):
     f_name = str(f_name) + ".txt"
     for content in f_content:
         with open(f_name, "a", encoding='utf-8') as txt:
-            txt.write(content[0] + ' '+content[1].replace('\n', '') + '\n\n')
+            # txt.write(content[0] + ' '+content[1].replace('\n', '') + '\n\n')
+            txt.write(content[1].replace('\n', '') + '\n\n')
         print("评论信息写入中")
 
 
@@ -113,7 +116,7 @@ def save_dm(f_name, f_content):
 
 if __name__ == "__main__":
     # 爬取大可爱神乐Mea的b站信息
-    get_all_video('349991143', 30, 10)
+    get_all_video('349991143', 30, 12)
     for aid in aid_list:
         info_list.clear()
         bs_list.clear()
