@@ -66,7 +66,7 @@ def get_all_comment(aid):
 # 返回值中的cid就是需要的oid
 # api:https://api.bilibili.com/x/player/pagelist?aid=73016525&jsonp=jsonp
 # aid:AV号
-# 在xml文件在转化为某些Ubicode时会报错，将其转化为二进制数据后再用utf-8转码回来可以绕开bug
+# 在xml文件在转化为某些Unicode时会报错，将其转化为二进制数据后再用utf-8转码回来可以绕开bug
 # r.text返回的是Unicode型的数据，而使用r.content返回的是bytes型的数据。
 # 也就是说，在使用r.content的时候，他已经只带了 html = bytes(bytearray(html, encoding='utf-8'))
 # 这是python2 的历史遗留问题
