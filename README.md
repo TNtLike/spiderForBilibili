@@ -7,3 +7,13 @@
 #### 获取弹幕信息的api:https://api.bilibili.com/x/v1/dm/list.so?oid=oidxxxxxx
 
 ##### 注意 oid并不是视频的av号
+
+### 新增了生成词云的脚本
+
+#### 使用jieba分词将爬过来的弹幕数据进行处理
+
+#### 再使用wordcloud生成词云
+
+##### 生成中文词云需要有相对应的字体文件
+
+![avatar](pjl_cloud4.jpg)
