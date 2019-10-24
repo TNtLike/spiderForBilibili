@@ -16,4 +16,4 @@
 
 ##### 生成中文词云需要有相对应的字体文件
 
-![Mea 神乐Mea KaguraMea 神楽めあ](pjl_cloud4.jpg"大可爱Mea")
+![Mea 神乐Mea KaguraMea 神楽めあ](pjl_cloud4.jpg)
