@@ -57,7 +57,7 @@ def get_all_comment(aid):
         json_text_list = json.loads(text)
         for i in json_text_list["data"]["replies"]:
             info_list.append([i["member"]["uname"], i["content"]["message"]])
-    save_commit('all_commit', info_list)
+    save_commit('comment', info_list)
     return info_list
 
 
@@ -89,7 +89,7 @@ def get_all_bulletscreen(aid):
     for item in info_list:
         info = item.xpath('./text()')
         bs_list.append(info)
-    save_dm('all_dm', bs_list)
+    save_dm('dm', bs_list)
     return bs_list
 
 
@@ -115,8 +115,8 @@ def save_dm(f_name, f_content):
 
 
 if __name__ == "__main__":
-    # 爬取大可爱神乐Mea的b站信息
-    get_all_video('349991143', 30, 12)
+    # 爬取阿夸的b站信息
+    get_all_video('375504219', 30, 9)
     for aid in aid_list:
         info_list.clear()
         bs_list.clear()

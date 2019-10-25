@@ -17,12 +17,12 @@ if __name__ == "__main__":
     key_list = []
     order_list = []
     tags = []
-    for line in open('all_dm.txt', encoding='UTF-8'):  # 2.txt是需要分词统计的文档
+    for line in open('dm.txt', encoding='UTF-8'):  # 2.txt是需要分词统计的文档
         item = jieba.analyse.extract_tags(line, topK=1)  # jieba分词 每一行选出一个关键词
         for i in range(len(item)):
             tags.append(item[i])
     tag_text = "/".join(tags)
-    color_mask = cv2.imread("mea.png")  # 读取背景图片
+    color_mask = cv2.imread("aq.png")  # 读取背景图片
     cloud = WordCloud(
         # 设置字体，不指定就会出现乱码
         font_path="simsun.ttf",
@@ -43,7 +43,7 @@ if __name__ == "__main__":
     img_colors = ImageColorGenerator(color_mask)
     # 字体颜色为背景图片的颜色
     word_cloud.recolor(color_func=img_colors)
-    word_cloud.to_file("pjl_cloud4.jpg")  # 保存图片
+    word_cloud.to_file("pjl_cloud3.jpg")  # 保存图片
     #  显示词云图片
     plt.imshow(word_cloud)
     plt.axis('off')

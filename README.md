@@ -16,4 +16,6 @@
 
 ##### 生成中文词云需要有相对应的字体文件
 
+![Aqua 湊阿库娅 MinatoAqua 湊あくあ](pjl_cloud3.jpg)
+
 ![Mea 神乐Mea KaguraMea 神楽めあ](pjl_cloud4.jpg)
