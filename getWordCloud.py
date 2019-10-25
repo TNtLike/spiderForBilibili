@@ -33,16 +33,16 @@ if __name__ == "__main__":
         # 允许最大词汇
         max_words=300,
         # 最大号字体
-        max_font_size=150,
+        max_font_size=80,
         # 配色方案数量
-        random_state=30
+        random_state=5
     )
 
     word_cloud = cloud.generate(tag_text)  # 产生词云
-    # 改变字体颜色
-    img_colors = ImageColorGenerator(color_mask)
-    # 字体颜色为背景图片的颜色
-    word_cloud.recolor(color_func=img_colors)
+    # # 改变字体颜色
+    # img_colors = ImageColorGenerator(color_mask)
+    # # 字体颜色为背景图片的颜色
+    # word_cloud.recolor(color_func=img_colors)
     word_cloud.to_file("pjl_cloud3.jpg")  # 保存图片
     #  显示词云图片
     plt.imshow(word_cloud)
